@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow-x: hidden;
+    background-color: #f9edfb;
+    /*cursor: url('img/red-mouse.png'), auto;*/
+    }
+    @font-face { 
+font-family: 'PlayfairDisplay'; 
+src: url('fonts/PlayfairDisplay-VariableFont_wght.ttf');
+} 
+
+   
+.header{
+    font-size: 1em;
+    text-align: left;
+    padding: 2%;
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 1%;
+    box-sizing: border-box;
+}
+
+
+.header a {
+    color: blue; /* Default color */
+    text-decoration: none; /* Remove underline */
+}
+
+.header a.active {
+    font-weight: bolder
+    /* Your styles for active link */
+}
+
+.header a:hover {
+    color: red; /* Change color on hover */
+}
+
+
+
+.body{
+    color: blue;
+    font-size: 1em;
+    text-align: left;
+    padding: 2%;
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 1%;
+    box-sizing: border-box; 
+}
+
+.folio{
+    color: blue;
+    font-size: 1em;
+    text-align: left;
+    padding: 2%;
+    height: 90vh;
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 1%;
+    box-sizing: border-box; 
+}
+
+.folio-item iframe {
+    width: 100%; /* Make the iframe fill the width of its container */
+    height: 100%; /* Make the iframe fill the height of its container */
+    border: none; /* Remove default iframe border */
+}
+
+.documentation{
+    width: 75vw;
+    margin-left: auto;
+}
+
+.documentation img{
+    padding: 1%;
+   /* max-width: 20vw;*/
+    max-height: 40vh;
+
+}
+
+.gallery img{
+    padding: 2%;
+    max-width: 20vw;
+
+}
+
+/*#sketch-container {
+    width: 100%;
+    height: 100%; /* Ensure container fills its parent 
+}*/
+
+
+em {
+    margin: 0;
+}
