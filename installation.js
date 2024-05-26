@@ -1,3 +1,5 @@
+//https://editor.p5js.org/amcc/sketches/LfVydXb0L was the base that we developed our sketch from
+
 let mic;
 let currentColor;
 let targetColor;
