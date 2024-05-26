@@ -1,4 +1,4 @@
-//https://editor.p5js.org/amcc/sketches/LfVydXb0L was the base that we developed our sketch from
+//https://editor.p5js.org/amcc/sketches/LfVydXb0L was the base that we developed our sketch from, and used ChatGPT to trouble shoot
 
 let mic;
 let currentColor;
