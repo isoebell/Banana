@@ -7,10 +7,47 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
-    <style>
-
-    </style>
     <link rel="shortcut icon" href="img/bluefavicon.png" type="image/x-icon">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Get all images in the documentation section
+    var images = document.querySelectorAll('.documentation img');
+
+    // Add click event listener to each image
+    images.forEach(function (image) {
+        image.addEventListener('click', function () {
+            toggleFullscreen(image);
+        });
+    });
+
+    // Function to toggle fullscreen mode
+    function toggleFullscreen(element) {
+        if (!document.fullscreenElement) {
+            // If no element is fullscreen, enter fullscreen mode
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) { /* Firefox */
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) { /* IE/Edge */
+                element.msRequestFullscreen();
+            }
+        } else {
+            // If an element is fullscreen, exit fullscreen mode
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) { /* Firefox */
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE/Edge */
+                document.msExitFullscreen();
+            }
+        }
+    }
+});
+    </script>
 </head>
 
 <body>
@@ -28,14 +65,14 @@
 
     <div class="folio">
         <div class="folio-item">
-            <p style="width: 50%;"> <em>The Weather Room</em> is an interactive installation project; a colour visualisation of sound. This installation intends to bring emphasis to the importance of human connect, and highlight the warmth experienced when we engage in our relationships and step away from our digital vortexes.
+            <p style="width: 50%;"> <em>The Weather Room</em> is a dynamic installation where viewers influence the ambience of a room with their presence. Projected light changes colour from dark blue tones to warm orange hues based on the sound frequencies in the room. There are recorded clips of people’s interactions in public spaces playing in the background, creating a visual representation of the collective human experience with the environment. This fosters a deep reflection of our relationship with nature.
                 <br>
                 <br>
                 Click the image on the right and interact with our installation; you could use a projector of your own, or just watch it on your computer and listen to this soundscape, and experience the changes in relation to sound.
             </p>
         </div>
         <div class="folio-item">
-            <iframe src="installation.html" frameborder="0"></iframe>
+            <iframe src="installation.html" frameborder="0" style="overflow: hidden;"></iframe>
             <!--<div id="sketch-container">
                 <script src="sketch.js"></script>-->
             </div>
@@ -43,13 +80,18 @@
     </div>
 
     <div class="documentation">
-        <img src="img/elevator.png" alt="elevator">
+        <img src="img/elevator.png" alt="elevator" class="fullscreenimage">
         <img src="img/setup.png" alt="setup">
-        <img src="img/adjusting_code.png" alt="adjusting_code">
-        <img src="img/itworks.png" alt="itworks">
-        <img src="img/outside.png" alt="outside">
+        <img src="img/adjusting_code.png" alt="adjusting_code" class="fullscreenimage">
+        <img src="img/itworks.png" alt="itworks" class="fullscreenimage">
+        <img src="img/outside.png" alt="outside" class="fullscreenimage">
+        <img src="img/label.png" alt="label" class="fullscreenimage">
+        <img src="img/lookinh.png" alt="looking" class="fullscreenimage">
+        <img src="img/screen.png" alt="screen" class="fullscreenimage">
+        <img src="img/oskar.png" alt="oskar" class="fullscreenimage">
+        <img src="img/her.png" alt="her" class="fullscreenimage">
+        <img src="img/2.png" alt="2" class="fullscreenimage">
     </div>
-
 </body>
 
 </html>
